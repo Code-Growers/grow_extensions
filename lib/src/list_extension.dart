@@ -12,7 +12,7 @@ extension ListExtension<T> on List<T> {
   /// ```
   T nth(int index) => this[index];
 
-  /// when using complex structures create unique list by defining unique identifie
+  /// when using complex structures create unique list by defining unique identifier
   /// ```dart
   /// <Cat>[Cat(name: 'Garfield'), Cat(name: 'Garfield')].uniqBy((Cat cat) => cat.name) // <Cat>[Cat(name: 'Garfield')]
   /// ```
@@ -25,4 +25,10 @@ extension ListExtension<T> on List<T> {
             orElse: () => null))
         .toList() as List<T>;
   }
+
+  /// when using simple structures create unique list using toSet method
+  /// ```dart
+  /// <int>[1, 2, 1].simpleUniq // <Cat>[1, 2]
+  /// ```
+  List<T> get simpleUniq => toSet().toList();
 }

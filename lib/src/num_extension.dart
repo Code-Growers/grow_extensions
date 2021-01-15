@@ -50,4 +50,12 @@ extension NumExtension on num {
   /// 2.0.eq(2.0) == true
   /// ```
   bool eq(num numberToEqual) => this == numberToEqual;
+
+  /// Number not equal to one passed in param
+  /// ```dart
+  /// 2.notEq(4) == true
+  /// 2.notEq(2) == false
+  /// 2.0.notEq(2.0) == false
+  /// ```
+  bool notEq(num numberNotToEqual) => this != numberNotToEqual;
 }
