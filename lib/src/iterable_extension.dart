@@ -1,4 +1,4 @@
-extension IterableExtension<T> on Iterable<T> {
+extension FebuIterableExtension<T> on Iterable<T> {
   /// Use where method then call toList method all in one go
   List<T> whereToList(bool Function(T) condition) => where(condition).toList();
 

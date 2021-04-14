@@ -1,4 +1,4 @@
-extension IntExtension on int {
+extension FebuIntExtension on int {
   /// integer is multiplied by value passed as param
   /// ```dart
   /// 2.mul(3) == 6

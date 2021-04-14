@@ -1,4 +1,4 @@
-extension BoolExtension on bool {
+extension FebuBoolExtension on bool {
   /// Negate current boolean value
   /// ```dart
   /// true.not == false // true

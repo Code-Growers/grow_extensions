@@ -1,4 +1,4 @@
-extension MapExtension<K, V> on Map<K, V> {
+extension FebuMapExtension<K, V> on Map<K, V> {
   /// keep that immutability going by creating new instance of current map
   /// ```dart
   /// final Map<int, int> map = <int, int>{ 1: 1 };

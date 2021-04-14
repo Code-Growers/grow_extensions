@@ -1,4 +1,4 @@
-extension KotlinStyleExtension<T> on T {
+extension FebuKotlinStyleExtension<T> on T {
   /// exact copy of kotlin like `let` operator. If called on not nil value inner function will be invoked with current value
   /// Be sure to use optional chaining when expecting possible null values
   /// ```dart

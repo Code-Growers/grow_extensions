@@ -1,4 +1,4 @@
-extension NumExtension on num {
+extension FebuNumExtension on num {
   /// Number is increased by value passed as param
   /// ```dart
   /// 1.add(1) == 2

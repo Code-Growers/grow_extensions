@@ -1,4 +1,4 @@
-extension ListExtension<T> on List<T> {
+extension FebuListExtension<T> on List<T> {
   /// keep that immutability going by creating new instance of current list
   /// ```dart
   /// final List<int> list = <int>[1, 2];

@@ -1,4 +1,4 @@
-extension DoubleExtension on double {
+extension FebuDoubleExtension on double {
   /// double is multiplied by value passed as param
   /// ```dart
   /// 2.mul(3) == 6

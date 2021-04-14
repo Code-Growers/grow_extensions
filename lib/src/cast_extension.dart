@@ -1,4 +1,4 @@
-extension CastExtension<T> on T {
+extension FebuCastExtension<T> on T {
   /// Cast anything to any type you like
   /// ```dart
   /// final dynamic oneDynamic = 1;
