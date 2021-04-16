@@ -20,9 +20,8 @@ extension FebuListExtension<T> on List<T> {
     final List<Y> uniqueIdentifies =
         map((dynamic entity) => onMap(entity as T)).toSet().toList();
     return uniqueIdentifies
-        .map((Y identifier) => firstWhere(
-            (dynamic element) => onMap(element as T) == identifier,
-            orElse: () => null))
+        .map((Y identifier) =>
+            firstWhere((dynamic element) => onMap(element as T) == identifier))
         .toList() as List<T>;
   }
 

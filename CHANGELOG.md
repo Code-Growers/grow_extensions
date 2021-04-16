@@ -1,3 +1,7 @@
+## [0.0.3] - null safety
+
+* Added null safety
+
 ## [0.0.2] - Initial release.
 
 * Added simpleUniq, copy, removeEmpty, removeFalsy, removeEmptyOrFalsy, without, notEq

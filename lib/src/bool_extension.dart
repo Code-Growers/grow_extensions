@@ -5,11 +5,17 @@ extension FebuBoolExtension on bool {
   /// ```
   bool get not => !this;
 
-  /// Check if value is falsy or null
+  /// Check if value is falsy
   /// ```dart
-  /// null.nilOrFalsy // true
-  /// false.nilOrFalsy // true
-  /// true.nilOrFalsy // false
+  /// false.falsy // true
+  /// true.falsy // false
   /// ```
-  bool get nilOrFalsy => this == null || this == false;
+  bool get falsy => this == false;
+
+  /// Check if value is truthy
+  /// ```dart
+  /// false.truthy // false
+  /// true.truthy // true
+  /// ```
+  bool get truthy => this == true;
 }
