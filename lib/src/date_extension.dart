@@ -1,3 +1,5 @@
+import 'package:febu/src/bool_extension.dart';
+
 extension FebuDateExtension on DateTime {
   /// Check date is today
   /// ```dart
@@ -9,5 +11,13 @@ extension FebuDateExtension on DateTime {
             .difference(DateTime(now.year, now.month, now.day))
             .inDays ==
         0;
+  }
+
+  /// Check date is not today
+  /// ```dart
+  /// DateTime.now().isNotToday // false
+  /// ```
+  bool get isNotToday {
+    return isToday.not;
   }
 }
