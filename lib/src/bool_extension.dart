@@ -4,7 +4,9 @@ extension FebuBoolExtension on bool {
   /// true.not == false // true
   /// ```
   bool get not => !this;
+}
 
+extension FebuNullableBoolExtension on bool? {
   /// Check if value is falsy or null
   /// ```dart
   /// null.nilOrFalsy // true

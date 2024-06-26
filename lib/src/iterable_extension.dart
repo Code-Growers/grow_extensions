@@ -6,18 +6,28 @@ extension FebuIterableExtension<T> on Iterable<T> {
   List<E> mapToList<E>(E Function(T) transformer) => map(transformer).toList();
 
   /// Use firstWhere method and in case no match return null
-  T firstWhereOrNull(bool Function(T) condition) =>
-      firstWhere(condition, orElse: () => null);
+  T? firstWhereOrNull(bool Function(T) condition) {
+    try {
+      return firstWhere(condition);
+    } catch (_) {
+      return null;
+    }
+  }
 
   /// Use lastWhere method and in case no match return null
-  T lastWhereOrNull(bool Function(T) condition) =>
-      lastWhere(condition, orElse: () => null);
+  T? lastWhereOrNull(bool Function(T) condition) {
+    try {
+      return lastWhere(condition);
+    } catch (_) {
+      return null;
+    }
+  }
 
   /// Use firstWhere method and in case no match return fallback value
-  T firstWhereOrFallback(bool Function(T) condition, {T fallback}) =>
+  T firstWhereOrFallback(bool Function(T) condition, {required T fallback}) =>
       firstWhere(condition, orElse: () => fallback);
 
   /// Use lastWhere method and in case no match return fallback value
-  T lastWhereOrFallback(bool Function(T) condition, {T fallback}) =>
+  T lastWhereOrFallback(bool Function(T) condition, {required T fallback}) =>
       lastWhere(condition, orElse: () => fallback);
 }

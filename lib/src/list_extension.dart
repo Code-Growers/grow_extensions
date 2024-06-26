@@ -19,11 +19,14 @@ extension FebuListExtension<T> on List<T> {
   List<T> uniqBy<T, Y>(Y Function(T) onMap) {
     final List<Y> uniqueIdentifies =
         map((dynamic entity) => onMap(entity as T)).toSet().toList();
-    return uniqueIdentifies
-        .map((Y identifier) => firstWhere(
-            (dynamic element) => onMap(element as T) == identifier,
-            orElse: () => null))
-        .toList() as List<T>;
+    return uniqueIdentifies.map((Y identifier) {
+      try {
+        return firstWhere(
+            (dynamic element) => onMap(element as T) == identifier);
+      } catch (_) {
+        return null;
+      }
+    }).toList() as List<T>;
   }
 
   /// when using simple structures create unique list using toSet method
@@ -31,4 +34,18 @@ extension FebuListExtension<T> on List<T> {
   /// <int>[1, 2, 1].simpleUniq // <Cat>[1, 2]
   /// ```
   List<T> get simpleUniq => toSet().toList();
+
+  /// check if element is last in list 
+  /// ```dart
+  /// <int>[1, 2, 3].isLast(1) // false 
+  /// <int>[1, 2, 3].isLast(3) // true 
+  /// ```
+  bool isLast(T element) => indexOf(element) == length - 1;
+
+  /// check if element is first in list 
+  /// ```dart
+  /// <int>[1, 2, 3].isFirst(1) // true 
+  /// <int>[1, 2, 3].isFirst(3) // false 
+  /// ```
+  bool isFirst(T element) => indexOf(element) == 0;
 }

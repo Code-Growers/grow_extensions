@@ -1,11 +1,10 @@
 name: febu
 description: Fancy, yet basically useless extensions for dart language
 version: 0.0.3
-author: Adam Kvasnicka
 homepage: https://github.com/Code-Growers/febu
 
 environment:
-  sdk: ">=2.7.0 <3.0.0"
+  sdk: ">=3.4.1 <4.0.0"
 
 dependencies:
   flutter:
@@ -14,9 +13,5 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  cg_analysis:
-    git:
-      url: https://github.com/Code-Growers/cg_analysis.git
-      ref: master
 
 flutter:

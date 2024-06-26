@@ -1,12 +1,14 @@
-extension FebuKotlinStyleExtension<T> on T {
+extension FebuKotlinStyleExtension<T> on T? {
   /// exact copy of kotlin like `let` operator. If called on not nil value inner function will be invoked with current value
   /// Be sure to use optional chaining when expecting possible null values
   /// ```dart
   /// 1.let((int value) => print(value == 1)) // true
   /// null.let((int value) => print(value == 1)) // ... nothing :)
   /// ```
-  T let(void Function(T) func) {
-    func(this);
+  T? let(void Function(T) func) {
+    if (this != null) {
+      func(this!);
+    }
     return this;
   }
 
@@ -16,8 +18,10 @@ extension FebuKotlinStyleExtension<T> on T {
   /// 1.let(() => print('Meeeoow')) // Meeeoow
   /// null.let(() => print('Puuurr')) // ... nothing :)
   /// ```
-  T apply(void Function() func) {
-    func();
+  T? apply(void Function() func) {
+    if (this != null) {
+      func();
+    }
     return this;
   }
 
@@ -28,7 +32,7 @@ extension FebuKotlinStyleExtension<T> on T {
   /// 1.also((int value) => 2) // 2
   /// null.also((int value) => 2) // ... nothing :)
   /// ```
-  R also<R>(R Function(T) func) {
+  R also<R>(R Function(T?) func) {
     return func(this);
   }
 
