@@ -30,4 +30,17 @@ extension FebuIterableExtension<T> on Iterable<T> {
   /// Use lastWhere method and in case no match return fallback value
   T lastWhereOrFallback(bool Function(T) condition, {required T fallback}) =>
       lastWhere(condition, orElse: () => fallback);
+
+  /// Element at index or null 
+  /// ```dart
+  /// [1].atOrNull(0) // 1
+  /// [1].atOrNull(2) // null
+  /// ```
+  T? atOrNull(int index) {
+    try {
+      return elementAtOrNull(index);
+    } catch (_) {
+      return null;
+    }
+  }
 }
