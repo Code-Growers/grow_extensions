@@ -42,4 +42,18 @@ extension FebuListExtension<T> on List<T> {
   /// <int>[1, 2, 3].isFirst(3) // false
   /// ```
   bool isFirst(T element) => indexOf(element) == 0;
+
+  /// check if element is not last in list
+  /// ```dart
+  /// <int>[1, 2, 3].isLast(1) // true
+  /// <int>[1, 2, 3].isLast(3) // false
+  /// ```
+  bool isNotLast(T element) => !isLast(element);
+
+  /// check if element is not first in list
+  /// ```dart
+  /// <int>[1, 2, 3].isFirst(1) // false
+  /// <int>[1, 2, 3].isFirst(3) // true
+  /// ```
+  bool isNotFirst(T element) => !isFirst(element);
 }
