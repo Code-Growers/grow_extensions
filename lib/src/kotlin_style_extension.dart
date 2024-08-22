@@ -5,9 +5,9 @@ extension FebuKotlinStyleExtension<T> on T? {
   /// 1.let((int value) => print(value == 1)) // true
   /// null.let((int value) => print(value == 1)) // ... nothing :)
   /// ```
-  T? let(void Function(T) func) {
+  T? let(T Function(T) func) {
     if (this != null) {
-      func(this!);
+      return func(this!);
     }
     return this;
   }
@@ -18,9 +18,9 @@ extension FebuKotlinStyleExtension<T> on T? {
   /// 1.let(() => print('Meeeoow')) // Meeeoow
   /// null.let(() => print('Puuurr')) // ... nothing :)
   /// ```
-  T? apply(void Function() func) {
+  T? apply(T Function() func) {
     if (this != null) {
-      func();
+      return func();
     }
     return this;
   }

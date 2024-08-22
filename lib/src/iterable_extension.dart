@@ -31,10 +31,11 @@ extension FebuIterableExtension<T> on Iterable<T> {
   T lastWhereOrFallback(bool Function(T) condition, {required T fallback}) =>
       lastWhere(condition, orElse: () => fallback);
 
-  /// Element at index or null 
+  /// Element at index or null, wont throw on negative number 
   /// ```dart
   /// [1].atOrNull(0) // 1
   /// [1].atOrNull(2) // null
+  /// [1].atOrNull(-1) // null
   /// ```
   T? atOrNull(int index) {
     try {
