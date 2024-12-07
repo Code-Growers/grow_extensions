@@ -1,1 +1,1 @@
-include: package:cg_analysis/analysis_options.yaml
+include: package:flutter_lints/flutter.yaml
