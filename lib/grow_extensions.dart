@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-library febu;
+library grow_extensions;
 
 export 'src/bool_extension.dart';
 export 'src/build_context_extensions.dart';

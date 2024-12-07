@@ -1,3 +1,7 @@
+## [0.1.1] - Name
+
+- Renamed from `febu` to `grow_extensions`
+
 ## [0.1.0] - DOC
 
 - Add dart doc generated documentation

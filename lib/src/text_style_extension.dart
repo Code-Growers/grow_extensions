@@ -1,4 +1,4 @@
-import 'package:flutter/widgets.dart';
+import 'package:flutter/material.dart';
 
 import 'build_context_extensions.dart';
 
@@ -26,6 +26,12 @@ extension FebuTextStyleExtension on TextStyle {
   /// TextStyle().normal
   /// ```
   TextStyle get normal => copyWith(fontWeight: FontWeight.w400);
+
+  /// Creates a new TextStyle instance with color set to transparent to visually hide the text
+  /// ```dart
+  /// TextStyle().hidden
+  /// ```
+  TextStyle get hidden => withColor(Colors.transparent);
 
   /// Creates a new TextStyle instance with new color
   /// ```dart

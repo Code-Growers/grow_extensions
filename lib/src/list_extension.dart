@@ -23,6 +23,17 @@ extension FebuListExtension<T> on List<T> {
     return list;
   }
 
+  /// converts to grouped map based on selector fn
+  /// ```dart
+  /// <Cat>[Cat(name: 'Garfield'), Cat(name: 'Dog')].groupBy((Cat cat) => cat.name) // { 'Garfield': [Cat(name: 'Garfield')], 'Dog': [Cat(name: 'Dog')] }
+  /// ```
+  Map<K, List<T>> groupBy<K>(K Function(T element) key) {
+    return fold<Map<K, List<T>>>(
+        <K, List<T>>{},
+        (Map<K, List<T>> map, T element) =>
+            map..putIfAbsent(key(element), () => []).add(element));
+  }
+
   /// when using simple structures create unique list using toSet method
   /// ```dart
   /// <int>[1, 2, 1].simpleUniq // <Cat>[1, 2]

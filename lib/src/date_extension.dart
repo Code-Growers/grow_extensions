@@ -1,4 +1,4 @@
-import 'package:febu/src/bool_extension.dart';
+import 'bool_extension.dart';
 
 extension FebuDateExtension on DateTime {
   /// Check date is today
@@ -20,4 +20,11 @@ extension FebuDateExtension on DateTime {
   bool get isNotToday {
     return isToday.not;
   }
+
+  /// Check date is same date as input. Compared by day, month and year, not time
+  /// ```dart
+  /// DateTime.now().isSameDate(DateTime.now()) // true
+  /// ```
+  bool isSameDate(DateTime date) =>
+      day == date.day && month == date.month && year == date.year;
 }

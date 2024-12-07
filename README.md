@@ -1,4 +1,4 @@
-# Febu
+# grow_extensions
 
 Fancy yet basically useless extensions for dart language, which lets you write more declaratively/functional code.
 
@@ -6,11 +6,11 @@ Fancy yet basically useless extensions for dart language, which lets you write m
 
 ## Getting started
 
-Just add `febu` as dependency and start using it right away:
+Just add `grow_extensions` as dependency and start using it right away:
 
 ```dart
 
-export 'package:febu/febu.dart';
+export 'package:grow_extensions/grow_extensions.dart';
 
 final int two = 1.add(1); // 2
 ```

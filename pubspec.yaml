@@ -1,7 +1,7 @@
-name: febu
+name: grow_extensions
 description: Fancy, yet basically useless extensions for dart language
 version: 0.1.0
-homepage: https://github.com/Code-Growers/febu
+homepage: https://github.com/Code-Growers/grow_extensions
 
 environment:
   sdk: ">=3.5.4 <4.0.0"
