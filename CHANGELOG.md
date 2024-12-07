@@ -1,4 +1,8 @@
-## [0.0.4] - SDK
+## [0.1.0] - DOC
+
+- Add dart doc generated documentation
+
+## [0.0.4] - Addition, SDK
 
 - Bump sdk
 - Added text style and build context extension helpers
