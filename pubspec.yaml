@@ -1,7 +1,9 @@
 name: grow_extensions
-description: Fancy, yet basically useless extensions for dart language
+description: Fancy, yet basically useless extensions for dart language that we use across our multiple projects.
 version: 0.1.0
-homepage: https://github.com/Code-Growers/grow_extensions
+repository: https://github.com/Code-Growers/grow_hooks
+issue_tracker: https://github.com/Code-Growers/grow_hooks/issues
+homepage: https://codegrowers.tech
 
 environment:
   sdk: ">=3.5.4 <4.0.0"
