@@ -1,6 +1,7 @@
 ## [0.1.1] - Name
 
 - Renamed from `febu` to `grow_extensions`
+- add `text_scaler` extensions
 
 ## [0.1.0] - DOC
 
