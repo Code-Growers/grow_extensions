@@ -15,3 +15,4 @@ export 'src/map_extension.dart';
 export 'src/num_extension.dart';
 export 'src/string_extension.dart';
 export 'src/text_style_extension.dart';
+export 'src/text_scaler_extension.dart';

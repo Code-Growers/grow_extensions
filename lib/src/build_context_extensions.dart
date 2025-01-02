@@ -7,9 +7,15 @@ extension FebuBuildContextExtension on BuildContext {
   /// ```
   MediaQueryData get mq => MediaQuery.of(this);
 
+  /// Shorthand access to TextScaler instance on current MediaQuery
+  /// ```dart
+  ///  context.textScaler // TextScaler
+  /// ```
+  TextScaler get textScaler => mq.textScaler;
+
   /// Scales values based on current MediaQuery text scaler value
   /// ```dart
   ///  context.scale(1.0) // 2.0
   /// ```
-  double textScalerScale(double value) => mq.textScaler.scale(value);
+  double textScalerScale(double value) => textScaler.scale(value);
 }
