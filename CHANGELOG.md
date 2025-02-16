@@ -1,3 +1,7 @@
+## [0.1.2] - Name
+
+- add `textScaled` extension
+
 ## [0.1.1] - Name
 
 - Renamed from `febu` to `grow_extensions`

@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
-  <meta name="description" content="API docs for the cast method from the FebuCastExtension extension, for the Dart programming language.">
-  <title>cast method - FebuCastExtension extension - grow_extensions library - Dart API</title>
+  <meta name="description" content="API docs for the groupBy method from the FebuListExtension extension, for the Dart programming language.">
+  <title>groupBy method - FebuListExtension extension - grow_extensions library - Dart API</title>
 
 
   
@@ -30,10 +30,10 @@
   <ol class="breadcrumbs gt-separated dark hidden-xs">
     <li><a href="../../index.html">grow_extensions</a></li>
     <li><a href="../../grow_extensions/grow_extensions-library.html">grow_extensions.dart</a></li>
-    <li><a href="../../grow_extensions/FebuCastExtension.html">FebuCastExtension<span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span></a></li>
-    <li class="self-crumb">cast&lt;<wbr><span class="type-parameter">R</span>&gt; method</li>
+    <li><a href="../../grow_extensions/FebuListExtension.html">FebuListExtension<span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span></a></li>
+    <li class="self-crumb">groupBy&lt;<wbr><span class="type-parameter">K</span>&gt; method</li>
   </ol>
-  <div class="self-name">cast</div>
+  <div class="self-name">groupBy</div>
   <form class="search navbar-right" role="search">
     <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
   </form>
@@ -54,26 +54,27 @@
 <div
     id="dartdoc-main-content"
     class="main-content"
-    data-above-sidebar="grow_extensions&#47;FebuCastExtension-extension-sidebar.html"
+    data-above-sidebar="grow_extensions&#47;FebuListExtension-extension-sidebar.html"
     data-below-sidebar="">
     <div>
-<h1><span class="kind-method">cast&lt;<wbr><span class="type-parameter">R</span>&gt;</span> method 
+<h1><span class="kind-method">groupBy&lt;<wbr><span class="type-parameter">K</span>&gt;</span> method 
 </h1></div>
 
     <section class="multi-line-signature">
       
 
-<span class="returntype">R</span>
-<span class="name ">cast</span>&lt;<wbr><span class="type-parameter">R</span>&gt;(<wbr>)
+<span class="returntype"><a href="https://api.flutter.dev/flutter/dart-core/Map-class.html">Map</a><span class="signature">&lt;<wbr><span class="type-parameter">K</span>, <span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span></span>&gt;</span></span>
+<span class="name ">groupBy</span>&lt;<wbr><span class="type-parameter">K</span>&gt;(<wbr><ol class="parameter-list single-line"> <li><span class="parameter" id="groupBy-param-key"><span class="type-annotation">K</span> <span class="parameter-name">key</span>(<ol class="parameter-list single-line"> <li><span class="parameter" id="param-element"><span class="type-annotation">T</span> <span class="parameter-name">element</span></span></li>
+</ol>)</span></li>
+</ol>)
 
       
 
     </section>
     
 <section class="desc markdown">
-  <p>Cast anything to any type you like</p>
-<pre class="language-dart"><code class="language-dart">final dynamic oneDynamic = 1;
-final int oneTyped = oneDynamic.cast&lt;int&gt;();
+  <p>converts to grouped map based on selector fn</p>
+<pre class="language-dart"><code class="language-dart">&lt;Cat&gt;[Cat(name: 'Garfield'), Cat(name: 'Dog')].groupBy((Cat cat) =&gt; cat.name) // { 'Garfield': [Cat(name: 'Garfield')], 'Dog': [Cat(name: 'Dog')] }
 </code></pre>
 </section>
 
@@ -81,8 +82,11 @@ final int oneTyped = oneDynamic.cast&lt;int&gt;();
     
 <section class="summary source-code" id="source">
   <h2><span>Implementation</span></h2>
-  <pre class="language-dart"><code class="language-dart">R cast&lt;R&gt;() {
-  return this as R;
+  <pre class="language-dart"><code class="language-dart">Map&lt;K, List&lt;T&gt;&gt; groupBy&lt;K&gt;(K Function(T element) key) {
+  return fold&lt;Map&lt;K, List&lt;T&gt;&gt;&gt;(
+      &lt;K, List&lt;T&gt;&gt;{},
+      (Map&lt;K, List&lt;T&gt;&gt; map, T element) =&gt;
+          map..putIfAbsent(key(element), () =&gt; []).add(element));
 }</code></pre>
 </section>
 
@@ -100,12 +104,12 @@ final int oneTyped = oneDynamic.cast&lt;int&gt;();
 <ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
     <li><a href="../../index.html">grow_extensions</a></li>
     <li><a href="../../grow_extensions/grow_extensions-library.html">grow_extensions</a></li>
-    <li><a href="../../grow_extensions/FebuCastExtension.html">FebuCastExtension<span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span></a></li>
-    <li class="self-crumb">cast&lt;<wbr><span class="type-parameter">R</span>&gt; method</li>
+    <li><a href="../../grow_extensions/FebuListExtension.html">FebuListExtension<span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span></a></li>
+    <li class="self-crumb">groupBy&lt;<wbr><span class="type-parameter">K</span>&gt; method</li>
 </ol>
 
 
-    <h5>FebuCastExtension extension on T</h5>
+    <h5>FebuListExtension extension on <a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span></h5>
     <div id="dartdoc-sidebar-left-content"></div>
   </div><!--/.sidebar-offcanvas-->
 
