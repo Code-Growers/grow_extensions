@@ -18,4 +18,10 @@ extension FebuBuildContextExtension on BuildContext {
   ///  context.scale(1.0) // 2.0
   /// ```
   double textScalerScale(double value) => textScaler.scale(value);
+
+  /// Check whether text is scaled based on current MediaQuery text scaler value
+  /// ```dart
+  ///  context.textScaled // false
+  /// ```
+  bool get textScaled => textScaler.scale(1) > 1;
 }
