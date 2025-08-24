@@ -26,8 +26,10 @@ extension FebuTextScalerExtension on TextScaler {
   double scaleWithNormalizedLimit(double baseValue, double upperBoundFactor) {
     final double scaledValue = scale(baseValue);
     final scaleFactor = scaledValue / baseValue;
-    final double normalizedScaleFactor =
-        _normalizeTextScalerValue(scaleFactor, upperBoundFactor);
+    final double normalizedScaleFactor = _normalizeTextScalerValue(
+      scaleFactor,
+      upperBoundFactor,
+    );
     return baseValue * normalizedScaleFactor;
   }
 }

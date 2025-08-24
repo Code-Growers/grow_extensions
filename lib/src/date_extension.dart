@@ -7,9 +7,11 @@ extension FebuDateExtension on DateTime {
   /// ```
   bool get isToday {
     DateTime now = DateTime.now();
-    return DateTime(year, month, day)
-            .difference(DateTime(now.year, now.month, now.day))
-            .inDays ==
+    return DateTime(
+          year,
+          month,
+          day,
+        ).difference(DateTime(now.year, now.month, now.day)).inDays ==
         0;
   }
 
@@ -27,4 +29,12 @@ extension FebuDateExtension on DateTime {
   /// ```
   bool isSameDate(DateTime date) =>
       day == date.day && month == date.month && year == date.year;
+
+  /// Returns the number of seconds elapsed since the Unix epoch (January 1, 1970).
+  /// This is calculated by dividing [millisecondsSinceEpoch] by 1000 and truncating to an integer.
+  /// ```dart
+  /// final now = DateTime.now();
+  /// print(now.secondsSinceEpoch); // e.g., 1681234567
+  /// ```
+  int get secondsSinceEpoch => millisecondsSinceEpoch ~/ 1000;
 }

@@ -1,3 +1,7 @@
+## [0.1.3] - Name
+
+- add `secondsSinceEpoch`, `capitalize` and `isGeoLocationString` extension
+
 ## [0.1.2] - Name
 
 - add `textScaled` extension
