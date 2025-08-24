@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
-  <meta name="description" content="API docs for the scaleWithNormalizedLimit method from the FebuTextScalerExtension extension, for the Dart programming language.">
-  <title>scaleWithNormalizedLimit method - FebuTextScalerExtension extension - grow_extensions library - Dart API</title>
+  <meta name="description" content="API docs for the capitalize property from the FebuStringExtension extension, for the Dart programming language.">
+  <title>capitalize property - FebuStringExtension extension - grow_extensions library - Dart API</title>
 
 
   
@@ -26,10 +26,10 @@
   <ol class="breadcrumbs gt-separated dark hidden-xs">
     <li><a href="../../index.html">grow_extensions</a></li>
     <li><a href="../../grow_extensions/">grow_extensions.dart</a></li>
-    <li><a href="../../grow_extensions/FebuTextScalerExtension.html">FebuTextScalerExtension</a></li>
-    <li class="self-crumb">scaleWithNormalizedLimit method</li>
+    <li><a href="../../grow_extensions/FebuStringExtension.html">FebuStringExtension</a></li>
+    <li class="self-crumb">capitalize property</li>
   </ol>
-  <div class="self-name">scaleWithNormalizedLimit</div>
+  <div class="self-name">capitalize</div>
   <form class="search navbar-right" role="search">
     <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
   </form>
@@ -46,49 +46,52 @@
 <div
     id="dartdoc-main-content"
     class="main-content"
-    data-above-sidebar="grow_extensions&#47;FebuTextScalerExtension-extension-sidebar.html"
+    data-above-sidebar="grow_extensions&#47;FebuStringExtension-extension-sidebar.html"
     data-below-sidebar="">
     <div>
-<h1><span class="kind-method">scaleWithNormalizedLimit</span> method 
+<h1><span class="kind-property">capitalize</span> property 
 </h1></div>
 
+    
+
+    
+        
+  <section id="getter">
     <section class="multi-line-signature">
       
-<span class="returntype"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span>
-<span class="name ">scaleWithNormalizedLimit</span>(<wbr><ol class="parameter-list single-line"> <li><span class="parameter" id="scaleWithNormalizedLimit-param-baseValue"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">baseValue</span>, </span></li>
-<li><span class="parameter" id="scaleWithNormalizedLimit-param-upperBoundFactor"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">upperBoundFactor</span></span></li>
-</ol>)
-
+      <span class="returntype"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>
+      get
+      <span class="name ">capitalize</span>
       
 
     </section>
     
 <section class="desc markdown">
-  <p>Scale any logical size using text scale factor with upper bound factor
-Resulted scaled value will be normalized, so there will be no size jumps</p>
-<pre class="language-dart"><code class="language-dart">TextScaler.linear(2.0).scaleWithNormalizedLimit(48, 1.33) // 64
+  <p>Returns a copy of this string with the first character converted to uppercase,
+leaving the rest of the string unchanged.
+If the string is empty, it returns the original string.</p>
+<pre class="language-dart"><code class="language-dart">print('hello'.capitalize); // Output: Hello
+print(''.capitalize);      // Output: ''
 </code></pre>
 </section>
-
 
     
 <section class="summary source-code" id="source">
   <h2><span>Implementation</span></h2>
-  <pre class="language-dart"><code class="language-dart">double scaleWithNormalizedLimit(double baseValue, double upperBoundFactor) {
-  final double scaledValue = scale(baseValue);
-  final scaleFactor = scaledValue &#47; baseValue;
-  final double normalizedScaleFactor = _normalizeTextScalerValue(
-    scaleFactor,
-    upperBoundFactor,
-  );
-  return baseValue * normalizedScaleFactor;
+  <pre class="language-dart"><code class="language-dart">String get capitalize {
+  if (isEmpty) {
+    return this;
+  }
+  return this[0].toUpperCase() + substring(1);
 }</code></pre>
 </section>
 
+  </section>
 
-  </div> <!-- /.main-content -->
-  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
-    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+
+</div> <!-- /.main-content -->
+<div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+  <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
 <header id="header-search-sidebar" class="hidden-l">
   <form class="search-sidebar" role="search">
     <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
@@ -97,14 +100,14 @@ Resulted scaled value will be normalized, so there will be no size jumps</p>
 <ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
     <li><a href="../../index.html">grow_extensions</a></li>
     <li><a href="../../grow_extensions/">grow_extensions</a></li>
-    <li><a href="../../grow_extensions/FebuTextScalerExtension.html">FebuTextScalerExtension</a></li>
-    <li class="self-crumb">scaleWithNormalizedLimit method</li>
+    <li><a href="../../grow_extensions/FebuStringExtension.html">FebuStringExtension</a></li>
+    <li class="self-crumb">capitalize property</li>
 </ol>
 
-    <h5>FebuTextScalerExtension extension on <a href="https://api.flutter.dev/flutter/painting/TextScaler-class.html">TextScaler</a></h5>
-    <div id="dartdoc-sidebar-left-content"></div>
-  </div><!--/.sidebar-offcanvas-->
-  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  <h5>FebuStringExtension extension on <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></h5>
+  <div id="dartdoc-sidebar-left-content"></div>
+</div><!--/.sidebar-offcanvas-->
+<div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
 </div><!--/.sidebar-offcanvas-->
 </main>
 <footer>

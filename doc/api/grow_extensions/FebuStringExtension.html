@@ -16,42 +16,35 @@
   <link rel="stylesheet" href="../static-assets/github.css?v1">
   <link rel="stylesheet" href="../static-assets/styles.css?v1">
   <link rel="icon" href="../static-assets/favicon.png?v1">
-
   
 </head>
 
-
 <body data-base-href="../" data-using-base-href="false" class="light-theme">
-
 <div id="overlay-under-drawer"></div>
-
 <header id="title">
   <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
   <ol class="breadcrumbs gt-separated dark hidden-xs">
     <li><a href="../index.html">grow_extensions</a></li>
-    <li><a href="../grow_extensions/grow_extensions-library.html">grow_extensions.dart</a></li>
+    <li><a href="../grow_extensions/">grow_extensions.dart</a></li>
     <li class="self-crumb">FebuStringExtension extension</li>
   </ol>
   <div class="self-name">FebuStringExtension</div>
   <form class="search navbar-right" role="search">
     <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
   </form>
-  <div class="toggle" id="theme-button" title="Toggle brightness">
-    <label for="theme">
-      <input type="checkbox" id="theme" value="light-theme">
-      <span id="dark-theme-button" class="material-symbols-outlined">
-        dark_mode
-      </span>
-      <span id="light-theme-button" class="material-symbols-outlined">
-        light_mode
-      </span>
-    </label>
-  </div>
+  <button class="toggle" id="theme-button" title="Toggle between light and dark mode" aria-label="Light and dark mode toggle">
+    <span id="dark-theme-button" class="material-symbols-outlined" aria-hidden="true">
+      dark_mode
+    </span>
+    <span id="light-theme-button" class="material-symbols-outlined" aria-hidden="true">
+      light_mode
+    </span>
+  </button>
 </header>
 <main>
 <div
     id="dartdoc-main-content"
-    class="main-content"
+    class="main-content extension-page"
     data-above-sidebar="grow_extensions&#47;grow_extensions-library-sidebar.html"
     data-below-sidebar="grow_extensions&#47;FebuStringExtension-extension-sidebar.html">
     <div>
@@ -66,7 +59,7 @@
         <dt>on</dt>
         <dd>
           <ul class="comma-separated clazz-relationships">
-              <li><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></li>
+            <li><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></li>
           </ul>
         </dd>
       </dl>
@@ -74,13 +67,47 @@
 
 
     </section>
-
     
   <section
       class="summary offset-anchor"
       id="instance-properties">
     <h2>Properties</h2>
     <dl class="properties">
+        <dt id="capitalize" class="property">
+  <span class="name"><a href="../grow_extensions/FebuStringExtension/capitalize.html">capitalize</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>
+  
+
+</dt>
+<dd>
+      <p class="from-extension">
+        <span>Available on <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>,
+        provided by the <a href="../grow_extensions/FebuStringExtension.html">FebuStringExtension</a> extension</span>
+      </p>
+  Returns a copy of this string with the first character converted to uppercase,
+leaving the rest of the string unchanged.
+If the string is empty, it returns the original string.
+  <div class="features"><span class="feature">no setter</span></div>
+
+</dd>
+
+        <dt id="isGeoLocationString" class="property">
+  <span class="name"><a href="../grow_extensions/FebuStringExtension/isGeoLocationString.html">isGeoLocationString</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span>
+  
+
+</dt>
+<dd>
+      <p class="from-extension">
+        <span>Available on <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>,
+        provided by the <a href="../grow_extensions/FebuStringExtension.html">FebuStringExtension</a> extension</span>
+      </p>
+  Returns <code>true</code> if the string contains the degree symbol (<code>°</code>),
+indicating it may represent a geographic location (latitude or longitude).
+  <div class="features"><span class="feature">no setter</span></div>
+
+</dd>
+
         <dt id="isNumeric" class="property">
   <span class="name"><a href="../grow_extensions/FebuStringExtension/isNumeric.html">isNumeric</a></span>
   <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span>
@@ -88,6 +115,10 @@
 
 </dt>
 <dd>
+      <p class="from-extension">
+        <span>Available on <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>,
+        provided by the <a href="../grow_extensions/FebuStringExtension.html">FebuStringExtension</a> extension</span>
+      </p>
   Check if String is numeric value
   <div class="features"><span class="feature">no setter</span></div>
 
@@ -95,15 +126,14 @@
 
     </dl>
   </section>
-    
-    
-    
-    
-    
 
+    
+    
+    
+    
+    
 
 </div> <!-- /.main-content -->
-
 <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
   <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
 <header id="header-search-sidebar" class="hidden-l">
@@ -111,41 +141,31 @@
     <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
   </form>
 </header>
-
 <ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
     <li><a href="../index.html">grow_extensions</a></li>
-    <li><a href="../grow_extensions/grow_extensions-library.html">grow_extensions</a></li>
+    <li><a href="../grow_extensions/">grow_extensions</a></li>
     <li class="self-crumb">FebuStringExtension extension</li>
 </ol>
-
 
   <h5>grow_extensions library</h5>
   <div id="dartdoc-sidebar-left-content"></div>
 </div>
-
 <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
 </div><!--/.sidebar-offcanvas-->
-
 </main>
-
 <footer>
   <span class="no-break">
     grow_extensions
-      0.1.2
+      0.1.3
   </span>
-
   
 </footer>
-
 
 
 <script src="../static-assets/highlight.pack.js?v1"></script>
 <script src="../static-assets/docs.dart.js"></script>
 
-
-
 </body>
-
 </html>
 
 
