@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-library grow_extensions;
+library;
 
 export 'src/bool_extension.dart';
 export 'src/build_context_extensions.dart';
@@ -14,5 +14,5 @@ export 'src/list_extension.dart';
 export 'src/map_extension.dart';
 export 'src/num_extension.dart';
 export 'src/string_extension.dart';
-export 'src/text_style_extension.dart';
 export 'src/text_scaler_extension.dart';
+export 'src/text_style_extension.dart';

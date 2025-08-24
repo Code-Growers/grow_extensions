@@ -1,8 +1,13 @@
-## [0.1.3] - Name
+## [0.2.0] - SDK Bump, Kotlin extension update
+
+- bump to sdk 3.9+
+- update kotlin extension so they more closely resemble how they work in kotlin
+
+## [0.1.3] - Add more extensions
 
 - add `secondsSinceEpoch`, `capitalize` and `isGeoLocationString` extension
 
-## [0.1.2] - Name
+## [0.1.2] - New textScaled extension
 
 - add `textScaled` extension
 

@@ -1,5 +1,5 @@
 index_generator:
   exclude:
     - "**.g.dart"
-  indexes:
-    - path: lib
+  libraries:
+    - directory_path: lib
