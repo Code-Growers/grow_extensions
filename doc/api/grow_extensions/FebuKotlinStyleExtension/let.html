@@ -27,7 +27,7 @@
     <li><a href="../../index.html">grow_extensions</a></li>
     <li><a href="../../grow_extensions/">grow_extensions.dart</a></li>
     <li><a href="../../grow_extensions/FebuKotlinStyleExtension.html">FebuKotlinStyleExtension<span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span></a></li>
-    <li class="self-crumb">let method</li>
+    <li class="self-crumb">let&lt;<wbr><span class="type-parameter">R</span>&gt; method</li>
   </ol>
   <div class="self-name">let</div>
   <form class="search navbar-right" role="search">
@@ -49,13 +49,13 @@
     data-above-sidebar="grow_extensions&#47;FebuKotlinStyleExtension-extension-sidebar.html"
     data-below-sidebar="">
     <div>
-<h1><span class="kind-method">let</span> method 
+<h1><span class="kind-method">let&lt;<wbr><span class="type-parameter">R</span>&gt;</span> method 
 </h1></div>
 
     <section class="multi-line-signature">
       
-<span class="returntype">T?</span>
-<span class="name ">let</span>(<wbr><ol class="parameter-list single-line"> <li><span class="parameter" id="let-param-func"><span class="type-annotation">T</span> <span class="parameter-name">func</span>(<ol class="parameter-list single-line"> <li><span class="parameter" id="param-"><span class="type-annotation">T</span></span></li>
+<span class="returntype">R?</span>
+<span class="name ">let</span>&lt;<wbr><span class="type-parameter">R</span>&gt;(<wbr><ol class="parameter-list single-line"> <li><span class="parameter" id="let-param-func"><span class="type-annotation">R</span> <span class="parameter-name">func</span>(<ol class="parameter-list single-line"> <li><span class="parameter" id="param-"><span class="type-annotation">T</span></span></li>
 </ol>)</span></li>
 </ol>)
 
@@ -66,8 +66,8 @@
 <section class="desc markdown">
   <p>exact copy of kotlin like <code>let</code> operator. If called on not nil value inner function will be invoked with current value
 Be sure to use optional chaining when expecting possible null values</p>
-<pre class="language-dart"><code class="language-dart">1.let((int value) =&gt; print(value == 1)) // true
-null.let((int value) =&gt; print(value == 1)) // ... nothing :)
+<pre class="language-dart"><code class="language-dart">1.let((int value) =&gt; value == 1) // true
+null.let((int value) =&gt; value == 1) // ... nothing :)
 </code></pre>
 </section>
 
@@ -75,11 +75,11 @@ null.let((int value) =&gt; print(value == 1)) // ... nothing :)
     
 <section class="summary source-code" id="source">
   <h2><span>Implementation</span></h2>
-  <pre class="language-dart"><code class="language-dart">T? let(T Function(T) func) {
+  <pre class="language-dart"><code class="language-dart">R? let&lt;R&gt;(R Function(T) func) {
   if (this != null) {
     return func(this!);
   }
-  return this;
+  return null;
 }</code></pre>
 </section>
 
@@ -96,7 +96,7 @@ null.let((int value) =&gt; print(value == 1)) // ... nothing :)
     <li><a href="../../index.html">grow_extensions</a></li>
     <li><a href="../../grow_extensions/">grow_extensions</a></li>
     <li><a href="../../grow_extensions/FebuKotlinStyleExtension.html">FebuKotlinStyleExtension<span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span></a></li>
-    <li class="self-crumb">let method</li>
+    <li class="self-crumb">let&lt;<wbr><span class="type-parameter">R</span>&gt; method</li>
 </ol>
 
     <h5>FebuKotlinStyleExtension extension on T?</h5>
@@ -108,7 +108,7 @@ null.let((int value) =&gt; print(value == 1)) // ... nothing :)
 <footer>
   <span class="no-break">
     grow_extensions
-      0.1.3
+      0.2.0
   </span>
   
 </footer>

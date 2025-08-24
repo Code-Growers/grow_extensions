@@ -87,7 +87,7 @@
         <span>Available on T?,
         provided by the <a href="../grow_extensions/FebuKotlinStyleExtension.html">FebuKotlinStyleExtension</a> extension</span>
       </p>
-  exact copy of kotlin like <code>let</code> operator. If called on not nil value inner function will be invoked with current value
+  exact copy of kotlin like <code>also</code> operator. If called on not nil value inner function will be invoked with current value
 Be sure to use optional chaining when expecting possible null values
 Result of inner function invocation will be returned
   
@@ -95,7 +95,7 @@ Result of inner function invocation will be returned
 </dd>
 
         <dt id="apply" class="callable">
-  <span class="name"><a href="../grow_extensions/FebuKotlinStyleExtension/apply.html">apply</a></span><span class="signature">(<wbr><span class="parameter" id="apply-param-func"><span class="type-annotation">T</span> <span class="parameter-name">func</span>()</span>)
+  <span class="name"><a href="../grow_extensions/FebuKotlinStyleExtension/apply.html">apply</a></span><span class="signature">(<wbr><span class="parameter" id="apply-param-func"><span class="type-annotation">void</span> <span class="parameter-name">func</span>(<span class="parameter" id="param-"><span class="type-annotation">T</span></span>)</span>)
     <span class="returntype parameter">&#8594; T?</span>
   </span>
   
@@ -113,8 +113,8 @@ Be sure to use optional chaining when expecting possible null values
 </dd>
 
         <dt id="let" class="callable">
-  <span class="name"><a href="../grow_extensions/FebuKotlinStyleExtension/let.html">let</a></span><span class="signature">(<wbr><span class="parameter" id="let-param-func"><span class="type-annotation">T</span> <span class="parameter-name">func</span>(<span class="parameter" id="param-"><span class="type-annotation">T</span></span>)</span>)
-    <span class="returntype parameter">&#8594; T?</span>
+  <span class="name"><a href="../grow_extensions/FebuKotlinStyleExtension/let.html">let</a></span><span class="signature">&lt;<wbr><span class="type-parameter">R</span>&gt;</span><span class="signature">(<wbr><span class="parameter" id="let-param-func"><span class="type-annotation">R</span> <span class="parameter-name">func</span>(<span class="parameter" id="param-"><span class="type-annotation">T</span></span>)</span>)
+    <span class="returntype parameter">&#8594; R?</span>
   </span>
   
 
@@ -131,8 +131,8 @@ Be sure to use optional chaining when expecting possible null values
 </dd>
 
         <dt id="run" class="callable">
-  <span class="name"><a href="../grow_extensions/FebuKotlinStyleExtension/run.html">run</a></span><span class="signature">&lt;<wbr><span class="type-parameter">R</span>&gt;</span><span class="signature">(<wbr><span class="parameter" id="run-param-func"><span class="type-annotation">R</span> <span class="parameter-name">func</span>()</span>)
-    <span class="returntype parameter">&#8594; R</span>
+  <span class="name"><a href="../grow_extensions/FebuKotlinStyleExtension/run.html">run</a></span><span class="signature">(<wbr><span class="parameter" id="run-param-func"><span class="type-annotation">dynamic</span> <span class="parameter-name">func</span>()</span>)
+    <span class="returntype parameter">&#8594; void</span>
   </span>
   
 
@@ -179,7 +179,7 @@ Result of inner function invocation will be returned
 <footer>
   <span class="no-break">
     grow_extensions
-      0.1.3
+      0.2.0
   </span>
   
 </footer>

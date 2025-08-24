@@ -55,7 +55,8 @@
     <section class="multi-line-signature">
       
 <span class="returntype">T?</span>
-<span class="name ">apply</span>(<wbr><ol class="parameter-list single-line"> <li><span class="parameter" id="apply-param-func"><span class="type-annotation">T</span> <span class="parameter-name">func</span>()</span></li>
+<span class="name ">apply</span>(<wbr><ol class="parameter-list single-line"> <li><span class="parameter" id="apply-param-func"><span class="type-annotation">void</span> <span class="parameter-name">func</span>(<ol class="parameter-list single-line"> <li><span class="parameter" id="param-"><span class="type-annotation">T</span></span></li>
+</ol>)</span></li>
 </ol>)
 
       
@@ -74,9 +75,9 @@ null.let(() =&gt; print('Puuurr')) // ... nothing :)
     
 <section class="summary source-code" id="source">
   <h2><span>Implementation</span></h2>
-  <pre class="language-dart"><code class="language-dart">T? apply(T Function() func) {
+  <pre class="language-dart"><code class="language-dart">T? apply(void Function(T) func) {
   if (this != null) {
-    return func();
+    func(this as T);
   }
   return this;
 }</code></pre>
@@ -107,7 +108,7 @@ null.let(() =&gt; print('Puuurr')) // ... nothing :)
 <footer>
   <span class="no-break">
     grow_extensions
-      0.1.3
+      0.2.0
   </span>
   
 </footer>
