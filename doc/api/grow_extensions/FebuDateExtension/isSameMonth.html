@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
-  <meta name="description" content="API docs for the mapToList method from the FebuIterableExtension extension, for the Dart programming language.">
-  <title>mapToList method - FebuIterableExtension extension - grow_extensions library - Dart API</title>
+  <meta name="description" content="API docs for the isSameMonth property from the FebuDateExtension extension, for the Dart programming language.">
+  <title>isSameMonth property - FebuDateExtension extension - grow_extensions library - Dart API</title>
 
 
   
@@ -26,10 +26,10 @@
   <ol class="breadcrumbs gt-separated dark hidden-xs">
     <li><a href="../../index.html">grow_extensions</a></li>
     <li><a href="../../grow_extensions/">grow_extensions.dart</a></li>
-    <li><a href="../../grow_extensions/FebuIterableExtension.html">FebuIterableExtension<span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span></a></li>
-    <li class="self-crumb">mapToList&lt;<wbr><span class="type-parameter">E</span>&gt; method</li>
+    <li><a href="../../grow_extensions/FebuDateExtension.html">FebuDateExtension</a></li>
+    <li class="self-crumb">isSameMonth property</li>
   </ol>
-  <div class="self-name">mapToList</div>
+  <div class="self-name">isSameMonth</div>
   <form class="search navbar-right" role="search">
     <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
   </form>
@@ -46,38 +46,47 @@
 <div
     id="dartdoc-main-content"
     class="main-content"
-    data-above-sidebar="grow_extensions&#47;FebuIterableExtension-extension-sidebar.html"
+    data-above-sidebar="grow_extensions&#47;FebuDateExtension-extension-sidebar.html"
     data-below-sidebar="">
     <div>
-<h1><span class="kind-method">mapToList&lt;<wbr><span class="type-parameter">E</span>&gt;</span> method 
+<h1><span class="kind-property">isSameMonth</span> property 
 </h1></div>
 
+    
+
+    
+        
+  <section id="getter">
     <section class="multi-line-signature">
       
-<span class="returntype"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter">E</span>&gt;</span></span>
-<span class="name ">mapToList</span>&lt;<wbr><span class="type-parameter">E</span>&gt;(<wbr><ol class="parameter-list single-line"> <li><span class="parameter" id="mapToList-param-transformer"><span class="type-annotation">E</span> <span class="parameter-name">transformer</span>(<ol class="parameter-list single-line"> <li><span class="parameter" id="param-"><span class="type-annotation">T</span></span></li>
-</ol>)</span></li>
-</ol>)
-
+      <span class="returntype"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span>
+      get
+      <span class="name ">isSameMonth</span>
       
 
     </section>
     
 <section class="desc markdown">
-  <p>Use map method then call toList method all in one go</p>
+  <p>Check date is same month</p>
+<pre class="language-dart"><code class="language-dart">DateTime.now().isSameMonth // true
+</code></pre>
 </section>
-
 
     
 <section class="summary source-code" id="source">
   <h2><span>Implementation</span></h2>
-  <pre class="language-dart"><code class="language-dart">List&lt;E&gt; mapToList&lt;E&gt;(E Function(T) transformer) =&gt; map(transformer).toList();</code></pre>
+  <pre class="language-dart"><code class="language-dart">bool get isSameMonth {
+  DateTime now = DateTime.now();
+  return month == now.month &amp;&amp; year == now.year;
+}</code></pre>
 </section>
 
+  </section>
 
-  </div> <!-- /.main-content -->
-  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
-    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+
+</div> <!-- /.main-content -->
+<div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+  <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
 <header id="header-search-sidebar" class="hidden-l">
   <form class="search-sidebar" role="search">
     <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
@@ -86,14 +95,14 @@
 <ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
     <li><a href="../../index.html">grow_extensions</a></li>
     <li><a href="../../grow_extensions/">grow_extensions</a></li>
-    <li><a href="../../grow_extensions/FebuIterableExtension.html">FebuIterableExtension<span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span></a></li>
-    <li class="self-crumb">mapToList&lt;<wbr><span class="type-parameter">E</span>&gt; method</li>
+    <li><a href="../../grow_extensions/FebuDateExtension.html">FebuDateExtension</a></li>
+    <li class="self-crumb">isSameMonth property</li>
 </ol>
 
-    <h5>FebuIterableExtension extension on <a href="https://api.flutter.dev/flutter/dart-core/Iterable-class.html">Iterable</a><span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span></h5>
-    <div id="dartdoc-sidebar-left-content"></div>
-  </div><!--/.sidebar-offcanvas-->
-  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  <h5>FebuDateExtension extension on <a href="https://api.flutter.dev/flutter/dart-core/DateTime-class.html">DateTime</a></h5>
+  <div id="dartdoc-sidebar-left-content"></div>
+</div><!--/.sidebar-offcanvas-->
+<div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
 </div><!--/.sidebar-offcanvas-->
 </main>
 <footer>

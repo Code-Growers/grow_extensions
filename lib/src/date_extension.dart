@@ -15,6 +15,15 @@ extension FebuDateExtension on DateTime {
         0;
   }
 
+  /// Check date is same month
+  /// ```dart
+  /// DateTime.now().isSameMonth // true
+  /// ```
+  bool get isSameMonth {
+    DateTime now = DateTime.now();
+    return month == now.month && year == now.year;
+  }
+
   /// Check date is not today
   /// ```dart
   /// DateTime.now().isNotToday // false

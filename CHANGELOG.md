@@ -1,3 +1,7 @@
+## [0.2.1] - Add isSameMonth extension
+
+- add `isSameMonth` extension
+
 ## [0.2.0] - SDK Bump, Kotlin extension update
 
 - bump to sdk 3.9+
